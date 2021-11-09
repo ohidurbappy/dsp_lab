@@ -1,0 +1,16 @@
+clc; 
+clear all;
+x1=[4 2 6 3 8 1 5];
+n1=(-2:4);
+x2=[3 8 6 9 6 7]; 
+n2=(-4:1);
+kmin=n1(1)+n2(1);
+kmax=n1(end)+n2(end);
+y=conv(x1,x2);
+k=kmin:kmax;
+subplot(311);
+stem(n1,x1); 
+subplot(312);
+stem(n2,x2);
+subplot(313); 
+stem(k,y); 
